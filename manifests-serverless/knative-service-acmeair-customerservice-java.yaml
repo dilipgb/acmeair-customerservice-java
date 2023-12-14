@@ -22,10 +22,12 @@ spec:
             value: admin
           - name: PASSWORD
             value: password
+          - name: JVM_ARGS
+            value: "-Dmp.jwt.verify.publickey.location=https://acmeair-authservice-default.apps.m13lp49ocp.lnxne.boe/auth/getJwk"
           - name: MONGO_HOST
             value: acmeair-customer-db
           - name: ACMEAIR_STACKAA_AUTH_URL
-            value: "http://acmeair-auth-service:9080/auth"
+            value: "https://acmeair-authservice-default.apps.m13lp49ocp.lnxne.boe/auth"
           - name: JAEGER_AGENT_HOST
             value: jaeger-all-in-one-inmemory-agent
           - name: JAEGER_AGENT_PORT
